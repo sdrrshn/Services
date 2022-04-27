@@ -1,5 +1,6 @@
 package org.csystem.app.data;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletRequest;
@@ -7,6 +8,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 @Component
+@Scope("prototype")
 public class ClientInfo {
     private final HttpServletRequest request;
     private final LocalDateTime now;
